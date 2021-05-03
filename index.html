@@ -1,11 +1,152 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8" />
-    <title>Résumé</title>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Document</title>
+
+
+
+	
+	<link
+	  rel="stylesheet"
+	  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+	/>
+
+
+
+ <script defer src="index.js"></script><link href="css/main.css" rel="stylesheet"></head>
   </head>
   <body>
-    ― Hello World! &#x1F609;
-    <h1>Vtbeybu</h1>
+  <!-- MAIN NAV CONTAINER -->
+  <nav id="navigation" class="fixed w-full top-0 z-20">
+	<div class="flex justify-between h-16 items-center w-full px-4">
+	  <div class="hidden md:flex justify-center w-full">
+		 <div class="flex items-baseline space-x-4">
+			<a href="#about" class="nav-link">About Me</a>
+			<a href="#skills" class="nav-link">Skills</a>
+			<a href="#experience" class="nav-link">Experience</a>
+			<a href="#portfolio" class="nav-link">Portfolio</a>
+			<a href="#contacts" class="nav-link">Contacts</a>
+		 </div>
+	  </div>
+	  <div class="flex justify-end w-full md:hidden">
+		 <button
+			id="mobile-nav-button"
+			type="button"
+			class="focus:outline-none"
+		 >
+			<svg
+			  class="block h-8 w-8"
+			  xmlns="http://www.w3.org/2000/svg"
+			  fill="none"
+			  viewBox="0 0 24 24"
+			  stroke="#2c3e50"
+			  aria-hidden="true"
+			>
+			  <path
+				 stroke-linecap="round"
+				 stroke-linejoin="round"
+				 stroke-width="2"
+				 d="M4 6h16M4 12h16M4 18h16"
+			  />
+			</svg>
+		 </button>
+	  </div>
+	</div>
+ </nav>
+ <!-- MOBILE NAV -->
+ <div
+	id="mobile-nav"
+	class="hidden fixed inset-0 z-50 transition duration-300 ease-in-out"
+ >
+	<div class="bg-default absolute inset-0 opacity-95"></div>
+	<button
+	  type="button"
+	  id="mobile-nav-close-button"
+	  class="absolute top-2 right-2 focus:outline-none"
+	>
+	  <svg
+		 xmlns="http://www.w3.org/2000/svg"
+		 class="block h-8 w-8"
+		 fill="none"
+		 viewBox="0 0 24 24"
+		 stroke="#2c3e50"
+	  >
+		 <path
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			stroke-width="2"
+			d="M6 18L18 6M6 6l12 12"
+		 />
+	  </svg>
+	</button>
+	<div
+	  class="flex justify-center items-center flex-wrap px-2 pt-2 pb-3 space-y-1 sm:px-3 h-full"
+	>
+	  <div>
+		 <a href="#about" class="nav-link-mobile">About Me</a>
+		 <a href="#skills" class="nav-link-mobile">Skills</a>
+		 <a href="#experience" class="nav-link-mobile">Experience</a>
+		 <a href="#portfolio" class="nav-link-mobile">Portfolio</a>
+		 <a href="#contacts" class="nav-link-mobile">Contacts</a>
+	  </div>
+	</div>
+ </div>
+ <!-- HEADER BACKGROUND (video is only for desctop devices) -->
+ <div class="absolute bottom-0 right-0 h-screen min-w-full overflow-hidden">
+	<div class="absolute inset-0 bg-black opacity-50 z-10"></div>
+	<div
+	  class="mobile-header-bg h-screen w-full bg-no-repeat bg-cover lg:hidden"
+	></div>
+	<video
+	  id="video-bg"
+	  class="hidden lg:block object-cover absolute bottom-0 right-0 h-screen min-w-full overflow-hidden"
+	  autoplay
+	  muted
+	  loop
+	>
+	  <source src="static/bg.mp4" type="video/mp4" />
+	</video>
+ </div>
+ <!-- HEADER INFO -->
+ <div class="flex h-screen relative z-10 justify-center lg:items-center">
+	<div class="flex items-center w-full flex-wrap justify-center">
+	  <div class="flex w-full flex-wrap justify-center">
+		 <h1
+			class="w-full text-white text-5xl md:text-6xl font-medium text-center"
+		 >
+			Igor Melnichuk
+		 </h1>
+		 <h2 class="w-full mt-2 text-white text-4xl text-center">
+			Web Developer
+		 </h2>
+		 <div class="static mt-6 p-4 w-full flex justify-center">
+			<a href="#about" class="button w-full text-xl md:w-1/4">
+			  About Me
+			</a>
+		 </div>
+		 <div
+			class="absolute inset-x-0 bottom-2 p-4 w-full flex justify-center"
+		 >
+			<svg
+			  class="animate-bounce w-6 h-6 text-white"
+			  fill="none"
+			  stroke-linecap="round"
+			  stroke-linejoin="round"
+			  stroke-width="2"
+			  viewBox="0 0 24 24"
+			  stroke="currentColor"
+			>
+			  <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+			</svg>
+		 </div>
+	  </div>
+	</div>
+ </div>
+
+
+
   </body>
 </html>
